@@ -13,6 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+app.get('/', (req, res) => {
+    res.send("welcome...");
+});
+
 app.get('/productData',async (req,res)=>{
     try {
         console.log(`${BASE_URL}/products.json`, headers);
